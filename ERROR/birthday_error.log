@@ -1,0 +1,70 @@
+Extension 'commands.birthday' raised an error: IndentationError: unexpected indent (birthday.py, line 80)
+Traceback (most recent call last):
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 784, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/komuguru-bot/commands/birthday.py", line 80
+    @commands.slash_command(name="set_birthday_channel", description="誕生日通知チャンネルを設定します")
+IndentationError: unexpected indent
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/komuguru-bot/bot.py", line 101, in discord_reload_commands
+    bot.load_extension(extension_name)
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 918, in load_extension
+    self._load_from_module_spec(spec, name)
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 787, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.errors.ExtensionFailed: Extension 'commands.birthday' raised an error: IndentationError: unexpected indent (birthday.py, line 80)
+
+Extension 'commands.birthday' raised an error: ClientException: Cog named 'BirthdayManager' already loaded
+Traceback (most recent call last):
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 796, in _load_from_module_spec
+    setup(self)
+  File "/root/komuguru-bot/commands/birthday.py", line 131, in setup
+    bot.add_cog(BirthdayManager(bot))
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 663, in add_cog
+    raise discord.ClientException(f"Cog named {cog_name!r} already loaded")
+discord.errors.ClientException: Cog named 'BirthdayManager' already loaded
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/komuguru-bot/bot.py", line 101, in discord_reload_commands
+    bot.load_extension(extension_name)
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 918, in load_extension
+    self._load_from_module_spec(spec, name)
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 801, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.errors.ExtensionFailed: Extension 'commands.birthday' raised an error: ClientException: Cog named 'BirthdayManager' already loaded
+
+Extension 'commands.birthday' raised an error: NameError: name 'bot' is not defined
+Traceback (most recent call last):
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 784, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/komuguru-bot/commands/birthday.py", line 141, in <module>
+    class BirthdayManager(commands.Cog):
+  File "/root/komuguru-bot/commands/birthday.py", line 239, in BirthdayManager
+    @bot.event
+     ^^^
+NameError: name 'bot' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/komuguru-bot/bot.py", line 29, in load_commands
+    bot.load_extension(f'commands.{command_name}')
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 918, in load_extension
+    self._load_from_module_spec(spec, name)
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 787, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.errors.ExtensionFailed: Extension 'commands.birthday' raised an error: NameError: name 'bot' is not defined
+

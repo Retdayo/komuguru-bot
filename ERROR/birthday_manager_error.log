@@ -1,0 +1,22 @@
+Extension 'commands.birthday_manager' raised an error: ImportError: cannot import name 'load_data' from 'utils.file_operations' (/root/komuguru-bot/utils/file_operations.py)
+Traceback (most recent call last):
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 784, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/komuguru-bot/commands/birthday_manager.py", line 6, in <module>
+    from utils.file_operations import load_data, save_data
+ImportError: cannot import name 'load_data' from 'utils.file_operations' (/root/komuguru-bot/utils/file_operations.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/komuguru-bot/bot.py", line 29, in load_commands
+    bot.load_extension(f'commands.{command_name}')
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 918, in load_extension
+    self._load_from_module_spec(spec, name)
+  File "/root/komuguru-bot/komuguru/lib/python3.12/site-packages/discord/cog.py", line 787, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.errors.ExtensionFailed: Extension 'commands.birthday_manager' raised an error: ImportError: cannot import name 'load_data' from 'utils.file_operations' (/root/komuguru-bot/utils/file_operations.py)
+
